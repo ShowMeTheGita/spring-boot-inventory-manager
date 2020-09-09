@@ -1,16 +1,12 @@
 package org.academiadecodigo.floppybirds.InventoryManager.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "PRODUCTS")
 public class Product {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue (strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private int quantity;
