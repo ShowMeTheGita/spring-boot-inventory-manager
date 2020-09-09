@@ -39,6 +39,13 @@ public class ProductController {
         return productService.getProductByName(name);
     }
 
+    @PutMapping("/product/update")
+    public Product updateProductById(@RequestBody Product product) {
+        return productService.saveProduct(product);
+    }
+
+
+
 
 
 
