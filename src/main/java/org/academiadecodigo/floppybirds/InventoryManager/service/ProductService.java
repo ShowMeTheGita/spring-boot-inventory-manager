@@ -17,11 +17,11 @@ public class ProductService {
         return repository.save(product);
     }
 
-    public List<Product> saveProducts (List<Product> products) {
+    public Iterable<Product> saveProducts (List<Product> products) {
         return repository.saveAll(products);
     }
 
-    public List<Product> getProducts() {
+    public Iterable<Product> getProducts() {
         return repository.findAll();
     }
 
