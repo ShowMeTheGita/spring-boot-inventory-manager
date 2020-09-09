@@ -13,8 +13,18 @@ public class ProductService {
     @Autowired
     private ProductRepository repository;
 
-    public Product saveProduct(Product product) {
-        return repository.save(product);
+    public Product saveOrUpdateProduct(Product product) {
+
+        if (repository.findByName(product.getName()) == null) {
+            repository.save(product);
+        }
+
+        Product prod = repository.findByName(product.getName());
+        prod.setName(product.getName());
+        prod.setQuantity(product.getQuantity());
+
+       return repository.save(prod);
+
     }
 
     public Iterable<Product> saveProducts (List<Product> products) {
@@ -38,18 +48,26 @@ public class ProductService {
     }
 
     public String deleteProductById(int id) {
-        repository.deleteById(id);
-        return "Product with id " + id + " has been removed.";
+
+        Product toDeleteProd = repository.findById(id).orElse(null);
+
+        if (toDeleteProd != null) {
+            repository.delete(toDeleteProd);
+            return "Product with id " + id + " has been successfully deleted";
+        }
+
+        return "Cannot delete product. Product with id " + id + " does not exist";
     }
 
     public String deleteProduct(Product product) {
+
         repository.delete(product);
         return "Product deleted. Id was " + product.getId() + ".";
     }
 
-    public Product updateProduct(Product product) {
+    public Product updateProductByName(Product product) {
 
-        Product prod = repository.findById(product.getId()).orElse(null);
+        Product prod = repository.findByName(product.getName());
         prod.setName(product.getName());
         prod.setQuantity(product.getQuantity());
 
