@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Product {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.TABLE)
     private int id;
     private String name;
     private int quantity;
