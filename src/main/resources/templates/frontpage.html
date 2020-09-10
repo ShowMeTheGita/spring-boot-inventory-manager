@@ -8,7 +8,8 @@
     <!--  CSS imports -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- JS imports -->
+    <!-- JS && jQuery imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 
@@ -19,7 +20,7 @@
 
 
    <h3>Add products</h3>
-    <form id="productform" action="http://localhost:8080/api/addProduct" method="POST">
+    <form id="productform">
         <ul>
             <li>
                 <label for="name">Product name:</label> 
@@ -30,7 +31,7 @@
                 <input type="number" id="quantity" name="product_quantity">
             </li>
             <li class="button">
-                <button type="submit">Submit</button>
+                <button type="button" onclick="submitProduct()">Submit</button>
             </li>
         </ul>
     </form>
@@ -47,12 +48,8 @@
                 <th>Quantity</th>
             </tr>
             <tr>
-                <td>Test</td>
-                <td>Test</td>
             </tr>
             <tr>
-                <td>Test</td>
-                <td>Test</td>
             </tr>
         </table>
     </div>
