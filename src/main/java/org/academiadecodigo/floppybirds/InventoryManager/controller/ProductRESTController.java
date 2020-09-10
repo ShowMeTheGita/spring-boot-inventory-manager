@@ -49,14 +49,7 @@ public class ProductRESTController {
     @DeleteMapping(path = "/product/delete/{id}")
     public String deleteProductById(@PathVariable int id) {
 
-        String prodName = productService.getProductById(id).getName().toUpperCase();
-        String action = productService.deleteProductById(id);
-
-        if (action.equals("Product with id " + id + " has been successfully deleted")) {
-            return "Entry " + prodName + " with id " + id + " has been successfully deleted from the database.";
-        }
-
-        return "Cannot delete product. Product with id " + id + " does not exist";
+       return productService.deleteProductById(id);
 
     }
 

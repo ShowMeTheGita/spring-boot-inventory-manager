@@ -16,7 +16,10 @@ public class ProductService {
     public Product saveOrUpdateProduct(Product product) {
 
         if (repository.findByName(product.getName()) == null) {
-            repository.save(product);
+            Product newProd = new Product();
+            newProd.setName(product.getName().toLowerCase());
+            newProd.setQuantity(product.getQuantity());
+            repository.save(newProd);
         }
 
         Product prod = repository.findByName(product.getName());
@@ -53,7 +56,7 @@ public class ProductService {
 
         if (toDeleteProd != null) {
             repository.delete(toDeleteProd);
-            return "Product with id " + id + " has been successfully deleted";
+            return "Product with id " + id + " and name " + toDeleteProd.getName().toUpperCase() + " has been successfully deleted";
         }
 
         return "Cannot delete product. Product with id " + id + " does not exist";
