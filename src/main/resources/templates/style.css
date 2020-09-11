@@ -10,16 +10,20 @@
 
 .page-header {
     background-color: brown;
-    overflow: hidden;
+    display: grid;
+    height: 100px;
+    gap: 20px;
 }
 
 .page-header a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     float: left;
-    color: #f2f2f2;
+    color: brown;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    display: inline-block;
 }
 
 .page-header a:hover {
@@ -28,7 +32,7 @@
 }
 
 .page-header a.active {
-    background-color: #4CAF50;
+    background-color: brown;
     color: white;
 }
 
