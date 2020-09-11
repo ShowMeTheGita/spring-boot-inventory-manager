@@ -15,7 +15,7 @@ public class ProductService {
 
     public Product saveOrUpdateProduct(Product product) {
 
-        if (repository.findByName(product.getName()) == null) {
+        if (repository.findByName(product.getName()) == null && !product.getName().equals("") && !product.getName().matches("[0-9]+")) {
             Product newProd = new Product();
             newProd.setName(product.getName().toLowerCase());
             newProd.setQuantity(product.getQuantity());
@@ -23,10 +23,11 @@ public class ProductService {
         }
 
         Product prod = repository.findByName(product.getName());
+
         prod.setName(product.getName());
         prod.setQuantity(product.getQuantity());
 
-       return repository.save(prod);
+        return repository.save(prod);
 
     }
 
