@@ -1,4 +1,4 @@
-package org.academiadecodigo.floppybirds.InventoryManager.configfiles;
+package org.academiadecodigo.floppybirds.InventoryManager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

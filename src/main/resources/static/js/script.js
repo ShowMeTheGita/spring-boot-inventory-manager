@@ -7,7 +7,7 @@ function fetchProducts() {
         .then(response => response.json())
         .then(function (data) {
             data.forEach(element => {
-                $("<tr><td>" + element.name + "</td>" + "<td>" + element.quantity + "</td></tr>").appendTo('#products');
+                $("<tr><td id=" + "'" + element.name + "'>" + element.name + "</td>" + "<td>" + element.quantity + "</td>" + "<td style='text-align: center'><img id=" + "'" + element.id + "'" + " onclick='deleteProduct(this.id)' src='https://upload.wikimedia.org/wikipedia/commons/4/4d/Grey_delete_icon_%28Wikiproject_icons%29.svg' alt='delete-icon' width='25px' style='cursor: pointer' /></td></tr>").appendTo('#products');
             });
         });
 }
@@ -33,8 +33,26 @@ function submitProduct() {
     })
 }
 
+function deleteProduct(itemId) {
+   console.log(itemId);
+
+    $.ajax({
+        type: "DELETE",
+        url: "http://localhost:8080/api/product/delete/" + itemId,
+        data: itemId,
+        success: location.reload(),
+        dataType: "text",
+        contentType: "application/json",
+        error: (function(xhr, textStatus, errorThrown) {
+            alert('Error! Status = ' + xhr.status);
+        })
+    })
+
+
+}
+
 function filterTable() {
-    // Declare variables
+
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("searchInput");
     filter = input.value.toUpperCase();

@@ -1,35 +1,40 @@
-.box {
-    width: 100%;
-    text-align: center;
+
+/* === GENERAL STYLING RULES === */
+
+* {
+    box-sizing: border-box;
 }
 
-.title {
-    text-align: center;
+body {
+    margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.page-header {
-    background-color: brown;
-    overflow: hidden;
-}
-
-.page-header a {
-    float: left;
-    color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
 }
 
-.page-header a:hover {
-    background-color: #ddd;
-    color: black;
+/* === HEADER === */
+
+header {
+    display: flex;
+    height: 5em;
+    justify-content: center;
 }
 
-.page-header a.active {
-    background-color: #4CAF50;
-    color: white;
+.page-title {
+    border-bottom-style: solid;
+    border-color: brown;
+    display: flex;
+}
+
+.page-title h1 {
+    padding-left: 1em;
+}
+
+
+/* === MAIN CONTENT === */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
 }
 
 #products {
