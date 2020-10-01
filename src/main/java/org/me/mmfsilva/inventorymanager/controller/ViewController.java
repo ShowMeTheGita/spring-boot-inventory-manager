@@ -1,8 +1,7 @@
-package org.academiadecodigo.floppybirds.InventoryManager.controller;
+package org.me.mmfsilva.inventorymanager.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ViewController {

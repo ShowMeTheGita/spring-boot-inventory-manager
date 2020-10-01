@@ -1,4 +1,4 @@
-package org.academiadecodigo.floppybirds.InventoryManager.entity;
+package org.me.mmfsilva.inventorymanager.entity;
 
 import javax.persistence.*;
 

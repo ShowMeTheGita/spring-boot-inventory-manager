@@ -1,4 +1,4 @@
-package org.academiadecodigo.floppybirds.InventoryManager;
+package org.mmfsilva.inventorymanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

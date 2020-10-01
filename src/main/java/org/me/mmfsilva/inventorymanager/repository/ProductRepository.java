@@ -1,7 +1,6 @@
-package org.academiadecodigo.floppybirds.InventoryManager.repository;
+package org.me.mmfsilva.inventorymanager.repository;
 
-import org.academiadecodigo.floppybirds.InventoryManager.entity.Product;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.me.mmfsilva.inventorymanager.entity.Product;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

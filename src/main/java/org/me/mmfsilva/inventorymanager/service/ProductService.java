@@ -1,7 +1,7 @@
-package org.academiadecodigo.floppybirds.InventoryManager.service;
+package org.me.mmfsilva.inventorymanager.service;
 
-import org.academiadecodigo.floppybirds.InventoryManager.entity.Product;
-import org.academiadecodigo.floppybirds.InventoryManager.repository.ProductRepository;
+import org.me.mmfsilva.inventorymanager.entity.Product;
+import org.me.mmfsilva.inventorymanager.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
