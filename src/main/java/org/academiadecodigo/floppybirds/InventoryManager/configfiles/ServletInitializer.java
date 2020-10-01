@@ -1,4 +1,4 @@
-package org.academiadecodigo.floppybirds.InventoryManager;
+package org.academiadecodigo.floppybirds.InventoryManager.configfiles;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
