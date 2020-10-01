@@ -7,7 +7,7 @@ function fetchProducts() {
         .then(response => response.json())
         .then(function (data) {
             data.forEach(element => {
-                $("<tr><td id=" + "'" + element.name + "'>" + element.name + "</td>" + "<td>" + element.quantity + "</td>" + "<td style='text-align: center'><img id=" + "'" + element.id + "'" + " onclick='deleteProduct(this.id)' src='https://upload.wikimedia.org/wikipedia/commons/4/4d/Grey_delete_icon_%28Wikiproject_icons%29.svg' alt='delete-icon' width='25px' style='cursor: pointer' /></td></tr>").appendTo('#products');
+                $("<tr><td>" + element.name + "</td>" + "<td>" + element.quantity + "</td>" + "<td style='text-align: center'><img id=" + "'" + element.id + "'" + " onclick='deleteProduct(this.id)' src='https://upload.wikimedia.org/wikipedia/commons/4/4d/Grey_delete_icon_%28Wikiproject_icons%29.svg' alt='delete-icon' width='25px' style='cursor: pointer' /></td></tr>").appendTo('#products');
             });
         });
 }
