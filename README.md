@@ -6,7 +6,7 @@ A simple website where you can add, edit, delete and search for products. RESTfu
 <br/>   
   
   
-![gif](https://media2.giphy.com/media/HXEj0lVoDlrkorBzSp/giphy.gif)
+![preview-gif](https://media2.giphy.com/media/HXEj0lVoDlrkorBzSp/giphy.gif)
 
 ### Why?
 
