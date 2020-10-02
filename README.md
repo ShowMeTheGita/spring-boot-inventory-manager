@@ -11,7 +11,7 @@ A simple website where you can add, edit, delete and search for products. RESTfu
 ### Why?
 
 Up until this project I had only built a RESTful web service utilizing Spring MVC. That meant no embedded Tomcat and headaches with the config files. Then I read about Spring Boot and decided to give it a go.  
-The website is far from perfect and the visual of it is lacking, but the idea here was to simply play around with mostly the back-end. After many hours of Spring-Boot tutorials and simpler hands-on projects. :relieved:
+The website is far from perfect and the visual of it is lacking, but the idea here was to simply play around with mostly the back-end after many hours of Spring-Boot tutorials and simpler hands-on projects. :relieved:
 
 ---
 
